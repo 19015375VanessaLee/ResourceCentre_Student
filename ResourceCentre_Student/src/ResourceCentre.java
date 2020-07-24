@@ -216,11 +216,32 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-		// write your code here
+		// Elvis
+		ResourceCentre.retrieveAllChromebook(chromebookList);
+	    String tag1 = Helper.readString("Enter assest tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    Boolean isLoaned = doLoanChromebook(chromebookList, tag1, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+
+	    } else {
+	      System.out.println("Chromebook " + tag1 + " loaned out");
+	    }
 		return true;
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
+		// Elvis
+		
+		ResourceCentre.retrieveAllChromebook(chromebookList);
+	    String tag = Helper.readString("Enter assest tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+
+	    } else {
+	      System.out.println("Chromebook " + tag + " loaned out");
+	    }
 		
 		
 	}
@@ -263,8 +284,16 @@ public class ResourceCentre {
 		// write your code here
 	}
 	
+<<<<<<< HEAD
+	public String concatenate_elvis(String one, String two){
+        return "hello";
+}
+
+
+=======
 	public String concatenate_Christopher(String one, String two){
         return "hello";
 }
  
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student.git
 }
