@@ -146,11 +146,16 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
+		for (int i = 0; i < chromebookList.size(); i++) {
+			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", chromebookList.get(i).getAssetTag(), chromebookList.get(i).getDescription(), ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()), chromebookList.get(i).getDueDate(), chromebookList.get(i).getOs());
+		}
 		return output;
 	}
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
-		
-		String output = retrieveAllChromebook(chromebookList);
+		ResourceCentre.setHeader("CHROMEBOOK LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				"AVAILABLE", "DUE DATE","OS");
+		 output += retrieveAllChromebook(chromebookList);
 		System.out.println(output);
 	}
 
@@ -216,11 +221,32 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-		// write your code here
+		// Elvis
+		ResourceCentre.retrieveAllChromebook(chromebookList);
+	    String tag1 = Helper.readString("Enter assest tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    Boolean isLoaned = doLoanChromebook(chromebookList, tag1, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+
+	    } else {
+	      System.out.println("Chromebook " + tag1 + " loaned out");
+	    }
 		return true;
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
+		// Elvis
+		
+		ResourceCentre.retrieveAllChromebook(chromebookList);
+	    String tag = Helper.readString("Enter assest tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	    Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+
+	    } else {
+	      System.out.println("Chromebook " + tag + " loaned out");
+	    }
 		
 		
 	}
@@ -262,10 +288,21 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
+	
+<<<<<<< HEAD
+	public String concatenate_elvis(String one, String two){
+        return "hello";
+}
 
 	public String concatenate_Vanessa(String one, String two){
         return "hello";
         
 }
 
+=======
+	public String concatenate_Christopher(String one, String two){
+        return "hello2";
+}
+ 
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student.git
 }

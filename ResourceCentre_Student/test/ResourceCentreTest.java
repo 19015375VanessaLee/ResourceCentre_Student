@@ -89,12 +89,14 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
 	}
 
 	@Test
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
 		
 	}
 	
@@ -127,4 +129,8 @@ public class ResourceCentreTest {
 
 	}
 
-}
+	
+		
+		
+	}
+
