@@ -279,9 +279,16 @@ public class ResourceCentre {
 		// write your code here
 	}
 	
+<<<<<<< HEAD
 	public String concatenate_elvis(String one, String two){
         return "hello";
 }
 
 
+=======
+	public String concatenate_Christopher(String one, String two){
+        return "hello";
+}
+ 
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student.git
 }
