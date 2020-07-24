@@ -258,5 +258,8 @@ public class ResourceCentre {
 		// write your code here
 	}
 
+	public String concatenate_Vanessa(String one, String two){
+        return "hello";
+}
 
 }
