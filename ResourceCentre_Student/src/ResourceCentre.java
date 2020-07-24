@@ -170,8 +170,8 @@ public class ResourceCentre {
 		System.out.println("Camcorder added");
 	}
 	
+	//vanessa
 	public static Chromebook inputChromebook() {	
-		// write your code here
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("Enter description > ");
 		
