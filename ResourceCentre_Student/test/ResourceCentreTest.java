@@ -59,6 +59,7 @@ public class ResourceCentreTest {
 		
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test that Chromebookr arraylist size is 2?", 2, chromebookList.size());
+		
 	}
 	
 	@Test
