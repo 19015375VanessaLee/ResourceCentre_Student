@@ -52,6 +52,7 @@ public class ResourceCentreTest {
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
 	}
 	
 	@Test
@@ -82,14 +83,31 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		
 	}
 
 	@Test
 	public void doLoanCamcorderTest() {
+		// HuiWen
 		//fail("Not yet implemented");
 		// write your code here
-		
+		//boundary
+		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		// error
+		boolean isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "23-07-2020");
+		cc1.setIsAvailable(false);
+		assertFalse("Check that unavailable Camcorder cannot be loaned", isLoaned);
+		//error
+		isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "23-07-2020");
+		assertFalse("Check that non-existing Camcorder cannot be loaned", isLoaned);
+	   // normal
+		ResourceCentre.addCamcorder(camcorderList, cc2);
+	    isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012","23-07-2020");
+		assertTrue("Check that available book can be loan", isLoaned);
+	   	
 	}
+	
 	
 	@Test
 	public void doLoanChromebookTest() {
