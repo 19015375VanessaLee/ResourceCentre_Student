@@ -175,14 +175,20 @@ public class ResourceCentre {
 		System.out.println("Camcorder added");
 	}
 	
+	//vanessa
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
-		// write your code here
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String system = Helper.readString("Enter system > ");
+		
+		Chromebook cb = new Chromebook(tag, description, system);
 		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-		// write your code here
+
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
 	}
 	
 	//================================= Option 3 Loan =================================
@@ -289,6 +295,10 @@ public class ResourceCentre {
         return "hello";
 }
 
+	public String concatenate_Vanessa(String one, String two){
+        return "hello";
+        
+}
 
 =======
 	public String concatenate_Christopher(String one, String two){
@@ -297,3 +307,4 @@ public class ResourceCentre {
  
 >>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student.git
 }
+
