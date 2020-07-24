@@ -265,6 +265,7 @@ public class ResourceCentre {
 
 	public String concatenate_Vanessa(String one, String two){
         return "hello";
+        
 }
 
 }
