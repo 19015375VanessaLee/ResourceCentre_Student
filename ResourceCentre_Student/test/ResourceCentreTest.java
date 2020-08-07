@@ -50,6 +50,10 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void addChromebookTest() {
+<<<<<<< HEAD
+		//fail("Not yet implemented");
+		// write your code here
+=======
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		
 		ResourceCentre.addChromebook(chromebookList, cb1);		
@@ -59,6 +63,7 @@ public class ResourceCentreTest {
 		
 		ResourceCentre.addChromebook(chromebookList, cb2);
 		assertEquals("Test that Chromebookr arraylist size is 2?", 2, chromebookList.size());
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student
 		
 	}
 	
@@ -90,6 +95,9 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+<<<<<<< HEAD
+		
+=======
 		//Chris
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		String allChrombok = ResourceCentre.retrieveAllChromebook(chromebookList);
@@ -106,15 +114,36 @@ public class ResourceCentreTest {
 		
 		assertEquals("Check that viewAllChromebooklist", testOut, allChrombok);
 
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student
 	}
 
 	@Test
 	public void doLoanCamcorderTest() {
+		// HuiWen
 		//fail("Not yet implemented");
 		// write your code here
+<<<<<<< HEAD
+		//boundary
+		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		// error
+		boolean isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "23-07-2020");
+		cc1.setIsAvailable(false);
+		assertFalse("Check that unavailable Camcorder cannot be loaned", isLoaned);
+		//error
+		isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "23-07-2020");
+		assertFalse("Check that non-existing Camcorder cannot be loaned", isLoaned);
+	   // normal
+		ResourceCentre.addCamcorder(camcorderList, cc2);
+	    isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012","23-07-2020");
+		assertTrue("Check that available book can be loan", isLoaned);
+	   	
+=======
 		
 		
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student
 	}
+	
 	
 	@Test
 	public void doLoanChromebookTest() {
