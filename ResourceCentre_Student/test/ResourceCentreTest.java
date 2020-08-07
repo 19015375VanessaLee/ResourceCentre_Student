@@ -50,8 +50,20 @@ public class ResourceCentreTest {
 	}
 	@Test
 	public void addChromebookTest() {
+<<<<<<< HEAD
 		//fail("Not yet implemented");
 		// write your code here
+=======
+		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+		
+		ResourceCentre.addChromebook(chromebookList, cb1);		
+		assertEquals("Test if that Chromebook arraylist size is 1?", 1, chromebookList.size());
+		
+		assertSame("Test that Chromebook is added same as 1st item of the list?", cb1, chromebookList.get(0));
+		
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test that Chromebookr arraylist size is 2?", 2, chromebookList.size());
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student
 		
 	}
 	
@@ -83,7 +95,26 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+<<<<<<< HEAD
 		
+=======
+		//Chris
+		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+		String allChrombok = ResourceCentre.retrieveAllChromebook(chromebookList);
+		String testOut = "";
+		assertEquals("Check that viewAllChromebooklist", testOut, allChrombok);
+		
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test if that Chromebook arraylist size is 2?", 2, chromebookList.size());
+		
+		allChrombok = ResourceCentre.retrieveAllChromebook(chromebookList);
+		testOut = String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0011", "My Google Chromebook 1st", "Yes", "", "Mac OS");
+		testOut += String.format("%-10s %-30s %-10s %-10s %-20s\n","CB0012", "SAMSUNG Chromebook 4+", "Yes", "", "Win 10");
+		
+		assertEquals("Check that viewAllChromebooklist", testOut, allChrombok);
+
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student
 	}
 
 	@Test
@@ -91,6 +122,7 @@ public class ResourceCentreTest {
 		// HuiWen
 		//fail("Not yet implemented");
 		// write your code here
+<<<<<<< HEAD
 		//boundary
 		assertNotNull("Test if there is valid Camcorder arraylist to add to", camcorderList);
 		ResourceCentre.addCamcorder(camcorderList, cc1);
@@ -106,6 +138,10 @@ public class ResourceCentreTest {
 	    isLoaned = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012","23-07-2020");
 		assertTrue("Check that available book can be loan", isLoaned);
 	   	
+=======
+		
+		
+>>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student
 	}
 	
 	
@@ -138,4 +174,7 @@ public class ResourceCentreTest {
 
 	}
 
-}
+	
+				
+	}
+
