@@ -303,7 +303,7 @@ public class ResourceCentre {
 
 =======
 	public String concatenate_Christopher(String one, String two){
-        return "hello2";
+        return "hello3";
 }
  
 >>>>>>> branch 'master' of https://github.com/19015375VanessaLee/ResourceCentre_Student.git
